@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG LEATHERS - Contact Us</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            background: 
+                linear-gradient(135deg, #fefcf8 0%, #f8f6f0 25%, #f5f1e8 50%, #f2ede0 75%, #efead8 100%),
+                radial-gradient(circle at 20% 30%, rgba(139, 69, 19, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(205, 133, 63, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 50% 90%, rgba(160, 82, 45, 0.04) 0%, transparent 30%);
+            color: #3d2414;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Light animated background patterns */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(205, 133, 63, 0.02) 20px,
+                    rgba(205, 133, 63, 0.02) 40px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 30px,
+                    rgba(139, 69, 19, 0.015) 30px,
+                    rgba(139, 69, 19, 0.015) 60px
+                );
+            animation: patternFloat 20s ease-in-out infinite;
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 25% 40%, rgba(244, 164, 96, 0.1) 0%, transparent 60%),
+                radial-gradient(ellipse at 75% 60%, rgba(222, 184, 135, 0.08) 0%, transparent 50%),
+                linear-gradient(120deg, transparent 0%, rgba(205, 133, 63, 0.03) 50%, transparent 100%);
+            animation: lightFlow 15s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes patternFloat {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-10px, -15px) rotate(0.5deg); }
+            50% { transform: translate(8px, -10px) rotate(-0.3deg); }
+            75% { transform: translate(-5px, 10px) rotate(0.4deg); }
+        }
+
+        @keyframes lightFlow {
+            0%, 100% { opacity: 0.6; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(20px); }
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Elegant Header with light theme */
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            opacity: 0;
+            animation: gracefulEntrance 2s ease-out 0.5s forwards;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4ac7c, #cd853f, #d4ac7c, transparent);
+            animation: elegantLineExpand 2s ease-out 1.2s forwards;
+        }
+
+        @keyframes elegantLineExpand {
+            0% { width: 0; opacity: 0; }
+            100% { width: 400px; opacity: 1; }
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 250px;
+            height: 250px;
+            background: 
+                linear-gradient(145deg, #ffffff 0%, #f9f7f4 15%, #f2ede0 30%, #e8dcc6 45%, #ddd0a7 60%, #d4ac7c 80%, #cd853f 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #8b4513;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: logoFloat 6s ease-in-out infinite;
+            border: 3px solid rgba(205, 133, 63, 0.2);
+            box-shadow: 
+                0 10px 30px rgba(139, 69, 19, 0.15),
+                inset 0 2px 8px rgba(255, 255, 255, 0.8),
+                inset 0 -2px 8px rgba(205, 133, 63, 0.1);
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: linear-gradient(45deg, #cd853f, #d4ac7c, #e8dcc6, #cd853f);
+            border-radius: 50%;
+            animation: gentleBorderRotate 8s linear infinite;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            /* background: 
+                radial-gradient(ellipse at 30% 25%, rgba(255, 255, 255, 0.6) 0%, transparent 40%),
+                radial-gradient(ellipse at 70% 75%, rgba(244, 230, 211, 0.4) 0%, transparent 50%); */
+            border-radius: 50%;
+            animation: gentleShimmer 4s ease-in-out infinite alternate;
+        }
+
+        .logo:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 
+                0 20px 50px rgba(139, 69, 19, 0.25),
+                0 0 40px rgba(205, 133, 63, 0.2),
+                inset 0 4px 12px rgba(255, 255, 255, 0.9),
+                inset 0 -4px 12px rgba(205, 133, 63, 0.15);
+            border-color: rgba(205, 133, 63, 0.4);
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-8px) rotate(2deg); }
+            66% { transform: translateY(-3px) rotate(-1deg); }
+        }
+
+        @keyframes gentleBorderRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes gentleShimmer {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .company-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            background: #5C4033;
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: elegantGradientFlow 6s ease-in-out infinite;
+            margin-bottom: 1rem;
+            letter-spacing: 0.15em;
+            text-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+            position: relative;
+        }
+
+        .company-name::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #cd853f, transparent);
+            border-radius: 2px;
+            animation: underlineGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes elegantGradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes underlineGlow {
+            0% { box-shadow: 0 0 5px rgba(205, 133, 63, 0.3); }
+            100% { box-shadow: 0 0 15px rgba(205, 133, 63, 0.6); }
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #a0522d;
+            font-style: italic;
+            font-weight: 600;
+            opacity: 0;
+            animation: gracefulFadeIn 1.8s ease-out 2s forwards;
+            text-shadow: 0 1px 2px rgba(139, 69, 19, 0.1);
+        }
+
+        .thank-you-message {
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #8b4513, #a0522d, #cd853f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            animation: gracefulFadeIn 1.8s ease-out 2.5s forwards;
+            opacity: 0;
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+
+        .thank-you-message::before,
+        .thank-you-message::after {
+            content: '✨';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #cd853f;
+            animation: sparkleFloat 2s ease-in-out infinite alternate;
+        }
+
+        .thank-you-message::before {
+            left: -40px;
+        }
+
+        .thank-you-message::after {
+            right: -40px;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes sparkleFloat {
+            0% { transform: translateY(-50%) scale(1); }
+            100% { transform: translateY(-60%) scale(1.1); }
+        }
+
+        /* Light elegant contact grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            width: 100%;
+            margin-top: 2rem;
+            perspective: 1200px;
+        }
+
+        .contact-card {
+            background: 
+                linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 246, 240, 0.85) 50%, rgba(245, 241, 232, 0.8) 100%);
+            border: 2px solid rgba(205, 133, 63, 0.15);
+            border-radius: 25px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(60px) scale(0.9);
+            animation: cardGracefulEntrance 1.2s ease-out forwards;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 8px 32px rgba(139, 69, 19, 0.08),
+                0 4px 16px rgba(205, 133, 63, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-card:nth-child(1) { animation-delay: 0.6s; }
+        .contact-card:nth-child(2) { animation-delay: 0.9s; }
+        .contact-card:nth-child(3) { animation-delay: 1.2s; }
+        .contact-card:nth-child(4) { animation-delay: 1.5s; }
+        .contact-card:nth-child(5) { animation-delay: 1.8s; }
+        .contact-card:nth-child(6) { animation-delay: 2.1s; }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(205, 133, 63, 0.1), transparent);
+            transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 50%),
+                linear-gradient(135deg, rgba(244, 230, 211, 0.2) 0%, transparent 60%);
+            border-radius: 25px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            border-color: rgba(205, 133, 63, 0.3);
+            box-shadow: 
+                0 20px 60px rgba(139, 69, 19, 0.12),
+                0 8px 32px rgba(205, 133, 63, 0.1),
+                inset 0 2px 8px rgba(255, 255, 255, 0.95);
+            background: 
+                linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 244, 0.9) 50%, rgba(247, 243, 236, 0.85) 100%);
+        }
+
+        .contact-card:hover::before {
+            left: 100%;
+        }
+
+        .contact-card:hover::after {
+            opacity: 1;
+        }
+
+        .contact-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: #a0522d;
+            display: inline-block;
+            position: relative;
+            animation: iconGentle 4s ease-in-out infinite;
+            filter: drop-shadow(0 2px 4px rgba(139, 69, 19, 0.1));
+            transition: all 0.4s ease;
+        }
+
+        .contact-card:hover .contact-icon {
+            color: #8b4513;
+            transform: scale(1.15);
+            filter: drop-shadow(0 4px 12px rgba(205, 133, 63, 0.3));
+            animation: iconExcited 0.8s ease-in-out;
+        }
+
+        @keyframes iconGentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes iconExcited {
+            0% { transform: scale(1.15) rotate(0deg); }
+            25% { transform: scale(1.2) rotate(5deg); }
+            50% { transform: scale(1.25) rotate(-3deg); }
+            75% { transform: scale(1.2) rotate(2deg); }
+            100% { transform: scale(1.15) rotate(0deg); }
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #3d2414;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            text-shadow: 0 1px 2px rgba(139, 69, 19, 0.05);
+        }
+
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #cd853f, transparent);
+            border-radius: 1px;
+            transition: width 0.4s ease;
+        }
+
+        .contact-card:hover .contact-title::after {
+            width: 90%;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            color: #5d3e25;
+            line-height: 1.8;
+            font-weight: 500;
+            text-shadow: 0 1px 1px rgba(139, 69, 19, 0.05);
+        }
+
+        .contact-card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Enhanced Animations */
+        @keyframes gracefulEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.9);
+            }
+            60% {
+                opacity: 0.8;
+                transform: translateY(-8px) scale(1.02);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes cardGracefulEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(60px) scale(0.9);
+            }
+            60% {
+                opacity: 0.8;
+                transform: translateY(-8px) scale(1.02);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes gracefulFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Light floating elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: gentleFloat 25s infinite linear;
+        }
+
+        .floating-element.small {
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(205, 133, 63, 0.3), rgba(244, 164, 96, 0.1));
+            box-shadow: 0 0 8px rgba(205, 133, 63, 0.2);
+        }
+
+        .floating-element.medium {
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, rgba(160, 82, 45, 0.25), rgba(222, 184, 135, 0.08));
+            box-shadow: 0 0 12px rgba(160, 82, 45, 0.15);
+        }
+
+        .floating-element.large {
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, rgba(139, 69, 19, 0.2), rgba(244, 230, 211, 0.06));
+            box-shadow: 0 0 16px rgba(139, 69, 19, 0.1);
+        }
+
+        @keyframes gentleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+                transform: translateY(95vh) rotate(36deg) scale(1);
+            }
+            95% {
+                opacity: 1;
+                transform: translateY(5vh) rotate(324deg) scale(1);
+            }
+            100% {
+                transform: translateY(0vh) rotate(360deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Elegant Footer */
+        .footer {
+            margin-top: 5rem;
+            text-align: center;
+            opacity: 0;
+            animation: gracefulFadeIn 1.8s ease-out 3s forwards;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #cd853f, transparent);
+            animation: elegantLineExpand 1.8s ease-out 3.2s forwards;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            color: #8b4513;
+            font-style: italic;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(139, 69, 19, 0.1);
+            background: linear-gradient(45deg, #8b4513, #a0522d, #cd853f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Special light hover effects for different platforms */
+        .website-card:hover { 
+            border-color: rgba(74, 144, 226, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.12), 0 0 40px rgba(74, 144, 226, 0.1);
+        }
+        .instagram-card:hover { 
+            border-color: rgba(228, 64, 95, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.12), 0 0 40px rgba(228, 64, 95, 0.1);
+        }
+        .facebook-card:hover { 
+            border-color: rgba(24, 119, 242, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.12), 0 0 40px rgba(24, 119, 242, 0.1);
+        }
+        .youtube-card:hover { 
+            border-color: rgba(255, 0, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.12), 0 0 40px rgba(255, 0, 0, 0.1);
+        }
+        .location-card:hover { 
+            border-color: rgba(52, 168, 83, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.12), 0 0 40px rgba(52, 168, 83, 0.1);
+        }
+        .phone-card:hover { 
+            border-color: rgba(37, 211, 102, 0.3);
+            box-shadow: 0 20px 60px rgba(139, 69, 19, 0.12), 0 0 40px rgba(37, 211, 102, 0.1);
+        }
+
+        /* Decorative geometric shapes */
+        .geometric-decoration {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+
+        .geometric-decoration.circle {
+            border-radius: 50%;
+            border: 2px solid #cd853f;
+            animation: geometricFloat 15s ease-in-out infinite;
+        }
+
+        .geometric-decoration.triangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            animation: geometricRotate 20s linear infinite;
+        }
+
+        .geometric-decoration.diamond {
+            transform: rotate(45deg);
+            border: 2px solid #a0522d;
+            animation: geometricPulse 12s ease-in-out infinite;
+        }
+
+        @keyframes geometricFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @keyframes geometricRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes geometricPulse {
+            0%, 100% { transform: rotate(45deg) scale(1); opacity: 0.1; }
+            50% { transform: rotate(45deg) scale(1.2); opacity: 0.2; }
+        }
+
+        /* Enhanced Mobile-First Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 30px 15px;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+                max-width: 800px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background: 
+                    linear-gradient(135deg, #fefcf8 0%, #f8f6f0 25%, #f5f1e8 50%, #f2ede0 75%, #efead8 100%),
+                    radial-gradient(circle at 25% 40%, rgba(139, 69, 19, 0.06) 0%, transparent 60%),
+                    radial-gradient(circle at 75% 70%, rgba(205, 133, 63, 0.04) 0%, transparent 50%);
+                background-attachment: fixed;
+            }
+
+            .container {
+                padding: 25px 15px;
+                min-height: 100vh;
+            }
+
+            .header {
+                margin-bottom: 3rem;
+            }
+
+            .company-name {
+                font-size: 2.8rem;
+                letter-spacing: 0.1em;
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+            }
+
+            .company-name::after {
+                width: 150px;
+                bottom: -15px;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            .thank-you-message {
+                font-size: 1.5rem;
+                margin-bottom: 2.5rem;
+                padding: 0 20px;
+                line-height: 1.3;
+            }
+
+            .thank-you-message::before,
+            .thank-you-message::after {
+                display: none;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+                margin-top: 1.5rem;
+            }
+            
+            .contact-card {
+                padding: 2.2rem 1.8rem;
+                border-radius: 20px;
+                margin: 0 5px;
+                min-height: 180px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .contact-card:hover {
+                transform: translateY(-8px) scale(1.02);
+            }
+            
+            .logo {
+                width: 220px;
+                height: 220px;
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .logo:hover {
+                transform: scale(1.08) translateY(-3px);
+            }
+            
+            .contact-icon {
+                font-size: 3.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-title {
+                font-size: 1.4rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 1rem;
+            }
+
+            .contact-info {
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+
+            .footer {
+                margin-top: 3rem;
+                padding: 0 20px;
+            }
+
+            .footer-text {
+                font-size: 1rem;
+                text-align: center;
+                line-height: 1.4;
+            }
+
+            /* Mobile-specific geometric decorations */
+            .geometric-decoration {
+                opacity: 0.05 !important;
+            }
+
+            .geometric-decoration.circle {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            /* Reduce floating elements on mobile */
+            .floating-element {
+                display: none;
+            }
+
+            .floating-element:nth-child(-n+3) {
+                display: block;
+                animation-duration: 30s;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            .header {
+                margin-bottom: 2.5rem;
+            }
+
+            .company-name {
+                font-size: 2.4rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .company-name::after {
+                width: 120px;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+                padding: 0 15px;
+            }
+
+            .thank-you-message {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+                padding: 0 15px;
+            }
+
+            .contact-grid {
+                gap: 1.5rem;
+                margin-top: 1rem;
+            }
+
+            .contact-card {
+                padding: 2rem 1.5rem;
+                border-radius: 18px;
+                margin: 0 2px;
+                min-height: 160px;
+            }
+
+            .logo {
+                width: 150px;
+                height: 150px;
+                font-size: 2.5rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .contact-icon {
+                font-size: 2.8rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .contact-title {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+                margin-bottom: 0.8rem;
+            }
+
+            .contact-info {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .footer {
+                margin-top: 2.5rem;
+                padding: 0 15px;
+            }
+
+            .footer-text {
+                font-size: 0.9rem;
+            }
+
+            /* Further reduce decorative elements on small screens */
+            .geometric-decoration {
+                display: none;
+            }
+
+            /* Optimize animations for mobile performance */
+            * {
+                animation-duration: 0.5s !important;
+            }
+
+            .contact-card {
+                animation-duration: 1s !important;
+            }
+
+            .company-name,
+            .logo {
+                animation-duration: 2s !important;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .container {
+                padding: 15px 8px;
+            }
+
+            .company-name {
+                font-size: 2.2rem;
+            }
+
+            .contact-card {
+                padding: 1.8rem 1.2rem;
+                min-height: 140px;
+            }
+
+            .contact-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .contact-title {
+                font-size: 1.2rem;
+            }
+
+            .contact-info {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .contact-card {
+                transition: all 0.3s ease;
+            }
+
+            .contact-card:hover {
+                transform: none;
+                box-shadow: 
+                    0 12px 40px rgba(139, 69, 19, 0.1),
+                    0 6px 20px rgba(205, 133, 63, 0.08),
+                    inset 0 2px 8px rgba(255, 255, 255, 0.95);
+            }
+
+            .logo:hover {
+                transform: none;
+            }
+
+            /* Enhanced touch feedback */
+            .contact-card:active {
+                transform: scale(0.98);
+                background: 
+                    linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 248, 244, 0.92) 50%, rgba(247, 243, 236, 0.88) 100%);
+            }
+
+            .logo:active {
+                transform: scale(0.95);
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .logo img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
+        /* Landscape orientation on mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .container {
+                padding: 15px 20px;
+            }
+
+            .header {
+                margin-bottom: 1.5rem;
+            }
+
+            .company-name {
+                font-size: 2.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .thank-you-message {
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-top: 1rem;
+            }
+
+            .contact-card {
+                padding: 1.5rem 1.2rem;
+                min-height: 120px;
+            }
+
+            .logo {
+                width: 130px;
+                height: 130px;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .contact-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .footer {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative geometric elements -->
+    <div class="geometric-decoration circle" style="top: 15%; left: 10%; width: 60px; height: 60px;"></div>
+    <div class="geometric-decoration triangle" style="top: 25%; right: 15%; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 35px solid rgba(205, 133, 63, 0.1);"></div>
+    <div class="geometric-decoration diamond" style="bottom: 20%; left: 8%; width: 40px; height: 40px;"></div>
+    <div class="geometric-decoration circle" style="bottom: 30%; right: 12%; width: 80px; height: 80px;"></div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="hd_logo.png" alt="SG Leathers Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+            </div>
+            <h1 class="company-name">SG LEATHERS</h1>
+            <p class="tagline">Crafting Premium Leather Since Excellence</p>
+        </header>
+
+        <div class="thank-you-message">
+            Thank you for Contacting SG Leathers
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card phone-card">
+                <a href="tel:+919840525411">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="contact-title">Call Us</h3>
+                    <p class="contact-info">
+                        📱 +91 98405 25411<br>
+                        📱 +91 73973 95411<br>
+                        Available 9 AM - 8 PM
+                    </p>
+                </a>
+            </div>
+
+            <a href="https://sgleatherschennai.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="contact-card website-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3 class="contact-title">Our Website</h3>
+                    <p class="contact-info">
+                        Visit our official store<br>
+                        sgleatherschennai.com<br>
+                        Explore premium collection
+                    </p>
+                </div>
+            </a>
+
+            <div class="contact-card instagram-card">
+                <a href="https://www.instagram.com/sg.leathers?igsh=eDhmZmpsaWozMzlp" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3 class="contact-title">Instagram</h3>
+                    <p class="contact-info">
+                        Follow our leather craft<br>
+                        @sg.leathers<br>
+                        Latest designs & stories
+                    </p>
+                </a>
+            </div>
+
+            <div class="contact-card youtube-card">
+                <a href="https://youtube.com/@mohammedsaitu-bx2wm?si=CRtROWugdIv51Xew" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3 class="contact-title">YouTube</h3>
+                    <p class="contact-info">
+                        Watch leather mastery<br>
+                        Mohammed Saitu<br>
+                        Crafting tutorials & more
+                    </p>
+                </a>
+            </div>
+
+            <div class="contact-card facebook-card">
+                <a href="https://www.facebook.com/share/1ALdR24VRX/?mibextid=wwXIfr" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3 class="contact-title">Facebook</h3>
+                    <p class="contact-info">
+                        Join our community<br>
+                        SG Leathers Official<br>
+                        Updates & customer love
+                    </p>
+                </a>
+            </div>
+
+            <div class="contact-card location-card">
+                <a href="https://maps.app.goo.gl/PMvK4wfr1fTDNdcz9?g_st=com.google.maps.preview.copy" target="_blank">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="contact-title">Visit Our Store</h3>
+                    <p class="contact-info">
+                        📍 Chennai Location<br>
+                        Click for directions<br>
+                        Experience quality firsthand
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-text">✨ Handcrafted with Passion • Premium Quality Guaranteed ✨</p>
+        </footer>
+    </div>
+
+    <!-- Light floating elements -->
+    <div class="floating-element small" style="left: 8%; animation-delay: 0s;"></div>
+    <div class="floating-element medium" style="left: 18%; animation-delay: 4s;"></div>
+    <div class="floating-element small" style="left: 28%; animation-delay: 8s;"></div>
+    <div class="floating-element large" style="left: 38%; animation-delay: 12s;"></div>
+    <div class="floating-element medium" style="left: 48%; animation-delay: 16s;"></div>
+    <div class="floating-element small" style="left: 58%; animation-delay: 20s;"></div>
+    <div class="floating-element large" style="left: 68%; animation-delay: 24s;"></div>
+    <div class="floating-element medium" style="left: 78%; animation-delay: 28s;"></div>
+    <div class="floating-element small" style="left: 88%; animation-delay: 32s;"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab visibility change handler
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    document.title = 'Come Back Soon - SG Leathers';
+                } else {
+                    document.title = 'SG LEATHERS - Contact Us';
+                }
+            });
+
+            // Enhanced logo interactions with light theme
+            const logo = document.querySelector('.logo');
+            logo.addEventListener('click', function() {
+                // Create elegant light ripple effects
+                for(let i = 0; i < 4; i++) {
+                    setTimeout(() => {
+                        createLightRipple(this, i * 120);
+                    }, i * 200);
+                }
+                
+                // Gentle animation reset
+                this.style.animation = 'none';
+                setTimeout(() => {
+                    this.style.animation = 'logoFloat 6s ease-in-out infinite';
+                }, 100);
+            });
+
+            function createLightRipple(element, delay) {
+                const ripple = document.createElement('div');
+                const size = 180 + delay;
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, rgba(205, 133, 63, ${0.15 - delay/2000}) 0%, transparent 70%);
+                    border: 2px solid rgba(205, 133, 63, ${0.3 - delay/1500});
+                    transform: scale(0);
+                    animation: lightRippleExpand 2s ease-out;
+                    pointer-events: none;
+                    left: 50%;
+                    top: 50%;
+                    width: ${size}px;
+                    height: ${size}px;
+                    margin-left: ${-size/2}px;
+                    margin-top: ${-size/2}px;
+                `;
+                
+                if(!document.querySelector('#lightRippleAnimation')) {
+                    const style = document.createElement('style');
+                    style.id = 'lightRippleAnimation';
+                    style.textContent = `
+                        @keyframes lightRippleExpand {
+                            to {
+                                transform: scale(2.5);
+                                opacity: 0;
+                            }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+                
+                element.parentNode.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 2000);
+            }
+
+            // Gentle 3D mouse tracking for light theme
+            document.addEventListener('mousemove', function(e) {
+                const mouseX = (e.clientX / window.innerWidth) - 0.5;
+                const mouseY = (e.clientY / window.innerHeight) - 0.5;
+                
+                // Subtle parallax effect for cards
+                document.querySelectorAll('.contact-card').forEach((card, index) => {
+                    const depth = (index + 1) * 0.3; // Reduced for light theme
+                    const rotateY = mouseX * depth;
+                    const rotateX = -mouseY * depth;
+                    const translateX = mouseX * depth * 2;
+                    const translateY = mouseY * depth * 2;
+                    
+                    card.style.transform = `
+                        translateX(${translateX}px) 
+                        translateY(${translateY}px) 
+                        rotateY(${rotateY}deg) 
+                        rotateX(${rotateX}deg)
+                    `;
+                });
+
+                // Gentle logo movement
+                const logo = document.querySelector('.logo');
+                const logoRotateY = mouseX * 8; // Reduced rotation
+                const logoRotateX = -mouseY * 8;
+                logo.style.transform = `rotateY(${logoRotateY}deg) rotateX(${logoRotateX}deg)`;
+
+                // Light background parallax
+                const bgElement = document.body;
+                bgElement.style.background = `
+                    linear-gradient(135deg, #fefcf8 0%, #f8f6f0 25%, #f5f1e8 50%, #f2ede0 75%, #efead8 100%),
+                    radial-gradient(circle at ${20 + mouseX * 15}% ${30 + mouseY * 15}%, rgba(139, 69, 19, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at ${80 + mouseX * 10}% ${70 + mouseY * 10}%, rgba(205, 133, 63, 0.06) 0%, transparent 40%),
+                    radial-gradient(circle at ${50 + mouseX * 12}% ${90 + mouseY * 12}%, rgba(160, 82, 45, 0.04) 0%, transparent 30%)
+                `;
+            });
+
+            // Enhanced light-themed card interactions
+            document.querySelectorAll('.contact-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    // Create gentle sparkles
+                    createLightSparkles(this);
+                    
+                    // Smooth scaling
+                    this.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    // Gentle return to position
+                    setTimeout(() => {
+                        this.style.transform = '';
+                        this.style.transition = 'all 0.4s ease';
+                    }, 100);
+                });
+
+                card.addEventListener('click', function(e) {
+                    // Subtle click animation
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+
+                    // Create gentle click effect
+                    createLightClickBurst(e.currentTarget, e.clientX, e.clientY);
+                });
+            });
+
+            function createLightSparkles(element) {
+                for(let i = 0; i < 6; i++) {
+                    setTimeout(() => {
+                        const sparkle = document.createElement('div');
+                        const size = Math.random() * 4 + 3;
+                        sparkle.style.cssText = `
+                            position: absolute;
+                            width: ${size}px;
+                            height: ${size}px;
+                            background: radial-gradient(circle, rgba(205, 133, 63, 0.6), rgba(244, 164, 96, 0.3));
+                            border-radius: 50%;
+                            pointer-events: none;
+                            left: ${Math.random() * 100}%;
+                            top: ${Math.random() * 100}%;
+                            animation: lightSparkleFloat 3s ease-out forwards;
+                            box-shadow: 0 0 ${size * 3}px rgba(205, 133, 63, 0.4);
+                        `;
+                        
+                        if(!document.querySelector('#lightSparkleAnimation')) {
+                            const style = document.createElement('style');
+                            style.id = 'lightSparkleAnimation';
+                            style.textContent = `
+                                @keyframes lightSparkleFloat {
+                                    0% {
+                                        opacity: 0;
+                                        transform: translateY(0) scale(0) rotate(0deg);
+                                    }
+                                    30% {
+                                        opacity: 1;
+                                        transform: translateY(-15px) scale(1) rotate(180deg);
+                                    }
+                                    100% {
+                                        opacity: 0;
+                                        transform: translateY(-40px) scale(0) rotate(360deg);
+                                    }
+                                }
+                            `;
+                            document.head.appendChild(style);
+                        }
+                        
+                        element.appendChild(sparkle);
+                        setTimeout(() => sparkle.remove(), 3000);
+                    }, i * 150);
+                }
+            }
+
+            function createLightClickBurst(element, x, y) {
+                const rect = element.getBoundingClientRect();
+                const centerX = x - rect.left;
+                const centerY = y - rect.top;
+
+                for(let i = 0; i < 8; i++) {
+                    const particle = document.createElement('div');
+                    const angle = (i / 8) * Math.PI * 2;
+                    const velocity = Math.random() * 60 + 40; // Gentler burst
+                    const size = Math.random() * 3 + 2;
+                    
+                    particle.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        background: radial-gradient(circle, rgba(205, 133, 63, 0.7), rgba(244, 164, 96, 0.3));
+                        border-radius: 50%;
+                        pointer-events: none;
+                        left: ${centerX}px;
+                        top: ${centerY}px;
+                        box-shadow: 0 0 ${size * 2}px rgba(205, 133, 63, 0.5);
+                    `;
+                    
+                    const endX = centerX + Math.cos(angle) * velocity;
+                    const endY = centerY + Math.sin(angle) * velocity;
+                    
+                    particle.animate([
+                        { 
+                            transform: 'translate(0, 0) scale(1)', 
+                            opacity: 1 
+                        },
+                        { 
+                            transform: `translate(${endX - centerX}px, ${endY - centerY}px) scale(0)`, 
+                            opacity: 0 
+                        }
+                    ], {
+                        duration: 1200, // Longer, gentler animation
+                        easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                    });
+                    
+                    element.appendChild(particle);
+                    setTimeout(() => particle.remove(), 1200);
+                }
+            }
+
+            // Gentle dynamic floating element generation
+            function createDynamicFloatingElement() {
+                const element = document.createElement('div');
+                const types = ['small', 'medium', 'large'];
+                const type = types[Math.floor(Math.random() * types.length)];
+                
+                element.className = `floating-element ${type}`;
+                element.style.left = Math.random() * 100 + '%';
+                element.style.animationDelay = '0s';
+                element.style.animationDuration = (Math.random() * 20 + 20) + 's'; // Slower for elegance
+                
+                document.body.appendChild(element);
+                
+                setTimeout(() => {
+                    if(element.parentNode) {
+                        element.remove();
+                    }
+                }, 45000);
+            }
+
+            // Create floating elements less frequently for subtlety
+            setInterval(createDynamicFloatingElement, 4000);
+
+            // Gentle scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -30px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = entry.target.style.animation + ', gentlePulse 3s ease-in-out';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.contact-card').forEach(card => {
+                observer.observe(card);
+            });
+
+            // Add gentle pulse animation
+            if(!document.querySelector('#gentlePulseAnimation')) {
+                const style = document.createElement('style');
+                style.id = 'gentlePulseAnimation';
+                style.textContent = `
+                    @keyframes gentlePulse {
+                        0%, 100% { transform: scale(1); }
+                        50% { transform: scale(1.01); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            // Keyboard accessibility with light theme feedback
+            document.addEventListener('keydown', function(e) {
+                if(e.key === 'Enter' || e.key === ' ') {
+                    const focusedElement = document.activeElement;
+                    if(focusedElement.classList.contains('contact-card')) {
+                        focusedElement.style.backgroundColor = 'rgba(205, 133, 63, 0.05)';
+                        setTimeout(() => {
+                            focusedElement.style.backgroundColor = '';
+                        }, 200);
+                        focusedElement.click();
+                    }
+                }
+            });
+
+            // Enhanced mobile-specific interactions
+            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                // Mobile touch optimizations
+                document.querySelectorAll('.contact-card').forEach(card => {
+                    let touchStartTime;
+                    let touchMoved = false;
+                    
+                    card.addEventListener('touchstart', function(e) {
+                        touchStartTime = Date.now();
+                        touchMoved = false;
+                        
+                        this.style.transform = 'scale(0.97)';
+                        this.style.backgroundColor = 'rgba(205, 133, 63, 0.08)';
+                        this.style.transition = 'all 0.2s ease';
+                        
+                        // Create gentle touch feedback
+                        const touch = e.touches[0];
+                        createMobileTouchEffect(this, touch.clientX - this.getBoundingClientRect().left, 
+                                                touch.clientY - this.getBoundingClientRect().top);
+                    });
+
+                    card.addEventListener('touchmove', function(e) {
+                        touchMoved = true;
+                        this.style.transform = '';
+                        this.style.backgroundColor = '';
+                    });
+                    
+                    card.addEventListener('touchend', function(e) {
+                        const touchDuration = Date.now() - touchStartTime;
+                        
+                        setTimeout(() => {
+                            this.style.transform = '';
+                            this.style.backgroundColor = '';
+                            this.style.transition = '';
+                        }, 150);
+
+                        // Handle tap vs swipe
+                        if (!touchMoved && touchDuration < 500) {
+                            // Simulate click for tap
+                            const link = this.querySelector('a');
+                            if (link && !e.defaultPrevented) {
+                                e.preventDefault();
+                                // Add haptic feedback if available
+                                if (navigator.vibrate) {
+                                    navigator.vibrate(50);
+                                }
+                                setTimeout(() => {
+                                    if (link.target === '_blank') {
+                                        window.open(link.href, '_blank');
+                                    } else {
+                                        window.location.href = link.href;
+                                    }
+                                }, 100);
+                            }
+                        }
+                    });
+
+                    card.addEventListener('touchcancel', function() {
+                        this.style.transform = '';
+                        this.style.backgroundColor = '';
+                    });
+                });
+
+                // Mobile logo interactions
+                const logo = document.querySelector('.logo');
+                logo.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                    this.style.transition = 'all 0.2s ease';
+                });
+
+                logo.addEventListener('touchend', function() {
+                    // Create mobile ripple effect
+                    createMobileLogoRipple(this);
+                    
+                    setTimeout(() => {
+                        this.style.transform = '';
+                        this.style.transition = '';
+                    }, 200);
+
+                    if (navigator.vibrate) {
+                        navigator.vibrate(30);
+                    }
+                });
+
+                // Disable mouse events on touch devices
+                document.addEventListener('mousemove', function(e) {
+                    e.preventDefault();
+                }, { passive: false });
+            }
+
+            function createMobileTouchEffect(element, x, y) {
+                const effect = document.createElement('div');
+                effect.style.cssText = `
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    background: radial-gradient(circle, rgba(205, 133, 63, 0.4) 0%, transparent 70%);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    left: ${x - 15}px;
+                    top: ${y - 15}px;
+                    animation: mobileTouchExpand 0.6s ease-out;
+                    z-index: 10;
+                `;
+
+                if(!document.querySelector('#mobileTouchAnimation')) {
+                    const style = document.createElement('style');
+                    style.id = 'mobileTouchAnimation';
+                    style.textContent = `
+                        @keyframes mobileTouchExpand {
+                            0% {
+                                transform: scale(0);
+                                opacity: 1;
+                            }
+                            100% {
+                                transform: scale(3);
+                                opacity: 0;
+                            }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+
+                element.appendChild(effect);
+                setTimeout(() => effect.remove(), 600);
+            }
+
+            function createMobileLogoRipple(element) {
+                const ripple = document.createElement('div');
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: radial-gradient(circle, rgba(205, 133, 63, 0.2) 0%, transparent 50%);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    left: 0;
+                    top: 0;
+                    animation: mobileLogoRipple 1s ease-out;
+                `;
+
+                if(!document.querySelector('#mobileLogoRippleAnimation')) {
+                    const style = document.createElement('style');
+                    style.id = 'mobileLogoRippleAnimation';
+                    style.textContent = `
+                        @keyframes mobileLogoRipple {
+                            0% {
+                                transform: scale(0.8);
+                                opacity: 1;
+                            }
+                            100% {
+                                transform: scale(2);
+                                opacity: 0;
+                            }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+
+                element.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 1000);
+            }
+
+            // Mobile performance optimizations
+            let isScrolling = false;
+            let scrollTimeout;
+
+            window.addEventListener('scroll', function() {
+                if (!isScrolling) {
+                    // Reduce animations during scroll
+                    document.body.style.setProperty('--animation-play-state', 'paused');
+                }
+                
+                isScrolling = true;
+                
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    isScrolling = false;
+                    document.body.style.setProperty('--animation-play-state', 'running');
+                }, 150);
+            }, { passive: true });
+
+            // Optimize for mobile viewport changes
+            let viewportTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(viewportTimer);
+                viewportTimer = setTimeout(function() {
+                    // Recalculate positions after orientation change
+                    const cards = document.querySelectorAll('.contact-card');
+                    cards.forEach(card => {
+                        card.style.transform = '';
+                        card.style.transition = 'none';
+                        setTimeout(() => {
+                            card.style.transition = '';
+                        }, 100);
+                    });
+                }, 250);
+            }, { passive: true });
+
+            // Mobile-specific reduced motion respect
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                // Disable all animations for users who prefer reduced motion
+                const style = document.createElement('style');
+                style.textContent = `
+                    *, *::before, *::after {
+                        animation-duration: 0.01ms !important;
+                        animation-iteration-count: 1 !important;
+                        transition-duration: 0.01ms !important;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            // Mobile network-aware optimizations
+            if ('connection' in navigator) {
+                const connection = navigator.connection;
+                
+                if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+                    // Disable heavy animations on slow connections
+                    document.querySelectorAll('.floating-element').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    
+                    document.querySelectorAll('.geometric-decoration').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                }
+            }
+
+            // Mobile battery-aware optimizations
+            if ('getBattery' in navigator) {
+                navigator.getBattery().then(function(battery) {
+                    if (battery.level < 0.2) {
+                        // Reduce animations when battery is low
+                        const style = document.createElement('style');
+                        style.textContent = `
+                            .floating-element,
+                            .geometric-decoration {
+                                display: none !important;
+                            }
+                            * {
+                                animation-duration: 0.3s !important;
+                            }
+                        `;
+                        document.head.appendChild(style);
+                    }
+                });
+            }
+
+            // Enhanced accessibility for mobile screen readers
+            document.querySelectorAll('.contact-card').forEach((card, index) => {
+                card.setAttribute('role', 'button');
+                card.setAttribute('aria-label', `Contact option ${index + 1}: ${card.querySelector('.contact-title').textContent}`);
+                card.setAttribute('tabindex', '0');
+
+                // Screen reader announcements
+                card.addEventListener('focus', function() {
+                    const announcement = `Focused on ${this.querySelector('.contact-title').textContent}. ${this.querySelector('.contact-info').textContent}. Double tap to activate.`;
+                    
+                    if (window.speechSynthesis) {
+                        const utterance = new SpeechSynthesisUtterance(announcement);
+                        utterance.rate = 0.8;
+                        utterance.volume = 0.5;
+                        // Only announce if screen reader isn't already active
+                        if (!document.querySelector('[aria-live]')) {
+                            setTimeout(() => window.speechSynthesis.speak(utterance), 100);
+                        }
+                    }
+                });
+            });
+
+            // Mobile orientation change handler
+            window.addEventListener('orientationchange', function() {
+                // Recalculate layout after orientation change
+                setTimeout(() => {
+                    const header = document.querySelector('.header');
+                    const footer = document.querySelector('.footer');
+                    
+                    // Trigger reflow
+                    header.style.display = 'none';
+                    header.offsetHeight;
+                    header.style.display = '';
+                    
+                    footer.style.display = 'none';
+                    footer.offsetHeight;
+                    footer.style.display = '';
+                    
+                    // Reset any stuck animations
+                    document.querySelectorAll('.contact-card').forEach(card => {
+                        card.style.transform = '';
+                        card.style.transition = '';
+                    });
+                }, 500);
+            });
+
+            console.log('SG Leathers Mobile-Optimized Light Theme Contact Page Loaded Successfully! 📱✨');
+
+            // Light theme performance optimization
+            let animationFrame;
+            
+            function optimizedAnimationUpdate() {
+                if (animationFrame) {
+                    cancelAnimationFrame(animationFrame);
+                }
+                
+                animationFrame = requestAnimationFrame(() => {
+                    // Optimized light theme animations
+                });
+            }
+
+            // Create additional decorative elements dynamically
+            function createGeometricDecoration() {
+                const shapes = ['circle', 'triangle', 'diamond'];
+                const shape = shapes[Math.floor(Math.random() * shapes.length)];
+                const decoration = document.createElement('div');
+                
+                decoration.className = `geometric-decoration ${shape}`;
+                decoration.style.position = 'fixed';
+                decoration.style.top = Math.random() * 100 + '%';
+                decoration.style.left = Math.random() * 100 + '%';
+                decoration.style.opacity = Math.random() * 0.1 + 0.05;
+                
+                if (shape === 'circle') {
+                    const size = Math.random() * 40 + 30;
+                    decoration.style.width = size + 'px';
+                    decoration.style.height = size + 'px';
+                } else if (shape === 'triangle') {
+                    const size = Math.random() * 15 + 10;
+                    decoration.style.borderLeft = size + 'px solid transparent';
+                    decoration.style.borderRight = size + 'px solid transparent';
+                    decoration.style.borderBottom = (size * 1.5) + 'px solid rgba(205, 133, 63, 0.08)';
+                } else if (shape === 'diamond') {
+                    const size = Math.random() * 30 + 20;
+                    decoration.style.width = size + 'px';
+                    decoration.style.height = size + 'px';
+                }
+                
+                document.body.appendChild(decoration);
+                
+                setTimeout(() => {
+                    if(decoration.parentNode) {
+                        decoration.remove();
+                    }
+                }, 30000);
+            }
+
+            // Create decorative elements periodically
+            setInterval(createGeometricDecoration, 8000);
+
+            console.log('SG Leathers Light Theme Contact Page Loaded Successfully! ✨');
+        });
+
+        // Enhanced navigation function with light theme feedback
+        function navigateTo(url, isExternal = false) {
+            // Gentle click animation with light theme
+            event.currentTarget.style.transform = 'scale(0.98)';
+            event.currentTarget.style.backgroundColor = 'rgba(205, 133, 63, 0.05)';
+            
+            setTimeout(() => {
+                event.currentTarget.style.transform = '';
+                event.currentTarget.style.backgroundColor = '';
+            }, 250);
+
+            // Navigate to the URL
+            if (isExternal) {
+                window.open(url, '_blank');
+            } else {
+                window.location.href = url;
+            }
+        }
+
+        // Make all contact cards clickable with enhanced light theme interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.contact-card');
+            cards.forEach(card => {
+                const link = card.querySelector('a');
+                if (link) {
+                    const url = link.href;
+                    const isExternal = link.target === '_blank';
+                    
+                    // Enhanced click handler for light theme
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', function(e) {
+                        if (e.target === link || link.contains(e.target)) {
+                            return;
+                        }
+                        e.preventDefault();
+                        navigateTo(url, isExternal);
+                    });
+
+                    // Add focus styles for accessibility
+                    card.setAttribute('tabindex', '0');
+                    card.addEventListener('focus', function() {
+                        this.style.outline = '2px solid rgba(205, 133, 63, 0.3)';
+                        this.style.outlineOffset = '4px';
+                    });
+
+                    card.addEventListener('blur', function() {
+                        this.style.outline = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
